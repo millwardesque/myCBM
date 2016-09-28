@@ -6,12 +6,12 @@ public class RocketLauncher : MonoBehaviour {
     public Team team;
     public Transform barrelTip;
 
+    public ProjectileBehaviour[] rocketBehaviours;
+
     [Header("Rocket Direction")]
     public float angleVariance = 10f;
 
-    [Header("Rocket Force")]
-    public float rocketThrust = 10f;
-    public float rocketThrustVariance = 2f;
+    public float thrustMultiplier = 1f;
 
     int m_rocketsLaunched = 0;
 
@@ -27,15 +27,13 @@ public class RocketLauncher : MonoBehaviour {
     public Rocket FireRocket() {
         Rocket newRocket = Instantiate<Rocket> (prefabRocket);
         newRocket.transform.position = (barrelTip != null ? barrelTip.position : this.transform.position);
-        newRocket.name = "Rocket " + m_rocketsLaunched;
+        newRocket.name = "Rocket " + m_rocketsLaunched + " (" + name + ")";
         newRocket.team = team;
+        newRocket.behaviour = rocketBehaviours [Random.Range (0, rocketBehaviours.Length)];
 
         float angle = FiringAngle;
         newRocket.startDirection = Quaternion.AngleAxis (angle, Vector3.forward) * Vector3.right;
-
-        float thrust = rocketThrust;
-        thrust += Random.Range (-rocketThrustVariance, rocketThrustVariance);
-        newRocket.thrust = thrust;
+        newRocket.thrustMultiplier = thrustMultiplier;
 
         m_rocketsLaunched++;
 

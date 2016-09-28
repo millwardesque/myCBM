@@ -58,7 +58,7 @@ GameObject:
   - 114: {fileID: 114000013945822914}
   m_Layer: 8
   m_Name: Player Turret Platform
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,9 +150,10 @@ MonoBehaviour:
     type: 2}
   team: {fileID: 11400000, guid: 1192eaca4fedf4f8d898766df68c9534, type: 2}
   barrelTip: {fileID: 4000012016014908}
+  rocketBehaviours:
+  - {fileID: 11400000, guid: 00e99f93ac98c417284fca21f0d34aa3, type: 2}
   angleVariance: 0
-  rocketThrust: 10
-  rocketThrustVariance: 0
+  thrustMultiplier: 1
 --- !u!114 &114000013945822914
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -176,8 +177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be8f56398bdbd487f94b0f85595bc504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minThrust: 10
-  maxThrust: 20
+  minThrustMultiplier: 1
+  maxThrustMultiplier: 2
   thrustChargeTime: 1
 --- !u!212 &212000012343342398
 SpriteRenderer:

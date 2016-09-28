@@ -7,8 +7,10 @@ public class Rocket : MonoBehaviour {
     public Team team;
     public GameObject explosionPrototype;
     public Vector2 startDirection;
-    public float thrust = 10f;
     public float explosivePower = 10f;
+    public float thrustMultiplier = 1f;
+
+    public ProjectileBehaviour behaviour;
 
     public float lifetime = 3f;
     float lifeRemaining;
@@ -19,14 +21,17 @@ public class Rocket : MonoBehaviour {
 	void Start () {
         m_rb = GetComponent<Rigidbody2D> ();
 
-        UpdateSpriteDirection (startDirection);
-
-        m_rb.AddForce (startDirection * thrust, ForceMode2D.Impulse);
-
         lifeRemaining = lifetime;
 
         if (team != null) {
             team.Initialize (gameObject);    
+        }
+
+        if (behaviour != null) {
+            behaviour.Initialize (gameObject);
+        }
+        else {
+            Debug.Log (name + ": Null behaviour");
         }
 	}
 
@@ -38,14 +43,8 @@ public class Rocket : MonoBehaviour {
     }
 	
 	void FixedUpdate () {
-        UpdateSpriteDirection (m_rb.velocity);
+        behaviour.OnFixedUpdate ();
 	}
-
-    void UpdateSpriteDirection(Vector2 direction) {
-        // Rotate the sprite / collider to face the direction of motion.
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-    }
 
     void OnCollisionEnter2D(Collision2D col) {
         if (col.rigidbody != null) {

@@ -40,7 +40,7 @@ GameObject:
   - 61: {fileID: 61000013642980826}
   - 114: {fileID: 114000013584004300}
   m_Layer: 0
-  m_Name: Rocket
+  m_Name: EnemyRocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,8 +119,9 @@ MonoBehaviour:
   explosionPrototype: {fileID: 1000013565621912, guid: 641db88c572b04e8a8c9f80bcbebc164,
     type: 2}
   startDirection: {x: 0, y: 0}
-  thrust: 10
   explosivePower: 10
+  thrustMultiplier: 1
+  behaviour: {fileID: 11400000, guid: b5f0e1afb94f04629abc825980e306de, type: 2}
   lifetime: 5
 --- !u!114 &114000013584004300
 MonoBehaviour:

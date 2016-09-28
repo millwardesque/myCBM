@@ -40,7 +40,7 @@ GameObject:
   - 58: {fileID: 58000010938214866}
   - 114: {fileID: 114000011515499778}
   m_Layer: 0
-  m_Name: Anti-Rocket
+  m_Name: PlayerRocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131,8 +131,9 @@ MonoBehaviour:
   explosionPrototype: {fileID: 1000013565621912, guid: 641db88c572b04e8a8c9f80bcbebc164,
     type: 2}
   startDirection: {x: 0, y: 0}
-  thrust: 10
   explosivePower: 10
+  thrustMultiplier: 1
+  behaviour: {fileID: 11400000, guid: 00e99f93ac98c417284fca21f0d34aa3, type: 2}
   lifetime: 3
 --- !u!212 &212000012961469284
 SpriteRenderer:
