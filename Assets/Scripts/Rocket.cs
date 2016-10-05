@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Com.LuisPedroFonseca.ProCamera2D;
 
 public class Rocket : MonoBehaviour {
     Rigidbody2D m_rb;
@@ -67,6 +68,7 @@ public class Rocket : MonoBehaviour {
                 GameObject explosion = Instantiate<GameObject> (explosionPrototype);
                 explosion.transform.position = lastDamagePoint;
                 explosion.GetComponent<ParticleSystemRenderer> ().sortingOrder = 100;
+                Camera.main.GetComponent<ProCamera2DShake> ().Shake ();
             }
         }
     }

@@ -70,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013847484462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.82, y: -2, z: 0}
+  m_LocalPosition: {x: -6, y: -0.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -132,9 +132,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -0.125}
+  m_Offset: {x: 0, y: -0.12}
   serializedVersion: 2
-  m_Size: {x: 2, y: 0.35}
+  m_Size: {x: 2, y: 0.33}
 --- !u!114 &114000013240578564
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -151,7 +151,7 @@ MonoBehaviour:
   team: {fileID: 11400000, guid: 1192eaca4fedf4f8d898766df68c9534, type: 2}
   barrelTip: {fileID: 4000012016014908}
   rocketBehaviours:
-  - {fileID: 11400000, guid: 00e99f93ac98c417284fca21f0d34aa3, type: 2}
+  - {fileID: 11400000, guid: 2d91513d6e27e4929847c27f676b3a9c, type: 2}
   angleVariance: 0
   thrustMultiplier: 1
 --- !u!114 &114000013945822914
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398321680674747459d68bf623cb112a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 1
 --- !u!114 &114000014273306532
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be8f56398bdbd487f94b0f85595bc504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minThrustMultiplier: 1
+  minThrustMultiplier: 0.75
   maxThrustMultiplier: 2
   thrustChargeTime: 1
 --- !u!212 &212000012343342398

@@ -53,6 +53,12 @@ GameObject:
   - 4: {fileID: 4000013328510032}
   - 212: {fileID: 212000011834583404}
   - 114: {fileID: 114000011507400934}
+  - 50: {fileID: 50000010098549040}
+  - 58: {fileID: 58000013133235026}
+  - 58: {fileID: 58000011328230198}
+  - 58: {fileID: 58000011124625470}
+  - 114: {fileID: 114000011152734986}
+  - 114: {fileID: 114000011899766828}
   m_Layer: 0
   m_Name: Submarine
   m_TagString: Untagged
@@ -101,6 +107,77 @@ Transform:
   - {fileID: 4000010590716680}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &50000010098549040
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013025102364}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &58000011124625470
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013025102364}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.6, y: -0.1}
+  serializedVersion: 2
+  m_Radius: 0.25
+--- !u!58 &58000011328230198
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013025102364}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.6, y: -0.1}
+  serializedVersion: 2
+  m_Radius: 0.25
+--- !u!58 &58000013133235026
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013025102364}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -0.1}
+  serializedVersion: 2
+  m_Radius: 0.35
+--- !u!114 &114000011152734986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013025102364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 398321680674747459d68bf623cb112a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
 --- !u!114 &114000011507400934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,6 +192,18 @@ MonoBehaviour:
   start: {x: 2.66, y: -4.26}
   end: {x: 6.66, y: -4.26}
   speed: 1
+--- !u!114 &114000011899766828
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013025102364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14a325424513e4b1c986e2102d28a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: {fileID: 11400000, guid: d9693c74b26a146b0bd4a4671388b21f, type: 2}
 --- !u!114 &114000012049605540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -178,7 +267,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: fc5830546f11f4558af0b9ba8c1d5470, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

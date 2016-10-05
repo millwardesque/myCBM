@@ -32,6 +32,7 @@ public class RocketLauncher : MonoBehaviour {
         newRocket.behaviour = rocketBehaviours [Random.Range (0, rocketBehaviours.Length)];
 
         float angle = FiringAngle;
+        angle += Random.Range (-angleVariance / 2f, angleVariance / 2f);
         newRocket.startDirection = Quaternion.AngleAxis (angle, Vector3.forward) * Vector3.right;
         newRocket.thrustMultiplier = thrustMultiplier;
 

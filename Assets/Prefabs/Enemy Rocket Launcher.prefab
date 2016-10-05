@@ -72,6 +72,8 @@ MonoBehaviour:
     type: 2}
   team: {fileID: 11400000, guid: d9693c74b26a146b0bd4a4671388b21f, type: 2}
   barrelTip: {fileID: 0}
-  rocketBehaviours: []
-  angleVariance: 30
+  rocketBehaviours:
+  - {fileID: 11400000, guid: 2d91513d6e27e4929847c27f676b3a9c, type: 2}
+  - {fileID: 11400000, guid: 4431cad5e89964e03b12887181c738a9, type: 2}
+  angleVariance: 60
   thrustMultiplier: 1
