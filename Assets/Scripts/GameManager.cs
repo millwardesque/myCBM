@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour {
 
     void OnDestructableDead(Message message) {
         Destructable dead = message.data as Destructable;
-        if (dead == m_player.GetComponent <Destructable>()) {
+        if (m_player != null && dead == m_player.GetComponent <Destructable>()) {
             OnGameOver ();
         }
     }
@@ -77,7 +77,5 @@ public class GameManager : MonoBehaviour {
     void OnGameOver() {
         GameObject gameOver = Instantiate<GameObject> (gameOverWindow);
         gameOver.transform.SetParent (FindObjectOfType<Canvas>().transform, false);
-
-        Time.timeScale = 0f;
     }
 }

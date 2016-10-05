@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenRockets: 2
-  minTimeBetweenRockets: 0.1
+  minTimeBetweenRockets: 0.25
   timeDecreaseAfterRocket: 0.1
   firingAngle: 160
   firingAngleVariance: 0

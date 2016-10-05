@@ -20,7 +20,7 @@ public class TomahawkProjectileBehaviour : ProjectileBehaviour {
         m_rb = owner.GetComponent<Rigidbody2D> ();
         m_transform = owner.transform;
         m_thrustMultiplier = owner.GetComponent<Rocket> ().thrustMultiplier;
-        m_target = GameManager.Instance.Player.transform.position;
+        m_target = (GameManager.Instance.Player != null ? (Vector2)GameManager.Instance.Player.transform.position : Vector2.left);
 
         float xDirection = (m_target.x - m_transform.position.x);
         xDirection = (xDirection > 0f ? 1f : -1f);
