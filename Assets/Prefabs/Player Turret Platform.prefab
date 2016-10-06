@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012294555682}
   - 114: {fileID: 114000013240578564}
-  - 114: {fileID: 114000014273306532}
   - 212: {fileID: 212000014213457102}
+  - 114: {fileID: 114000012318916422}
   m_Layer: 8
   m_Name: Player Turret Launcher
   m_TagString: Untagged
@@ -132,9 +132,23 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -0.12}
+  m_Offset: {x: 0, y: -0.23}
   serializedVersion: 2
-  m_Size: {x: 2, y: 0.33}
+  m_Size: {x: 4, y: 0.7}
+--- !u!114 &114000012318916422
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010310066526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3cdd19f5466b456a9bf1e33fc79f67a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minThrustMultiplier: 0.25
+  maxThrustMultiplier: 2
+  dragLengthPerThrustUnit: 2
 --- !u!114 &114000013240578564
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -166,20 +180,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
---- !u!114 &114000014273306532
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010310066526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be8f56398bdbd487f94b0f85595bc504, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minThrustMultiplier: 0.75
-  maxThrustMultiplier: 2
-  thrustChargeTime: 1
 --- !u!212 &212000012343342398
 SpriteRenderer:
   m_ObjectHideFlags: 1

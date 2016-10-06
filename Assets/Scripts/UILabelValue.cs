@@ -7,7 +7,7 @@ public class UILabelValue : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        GameManager.Instance.Messenger.AddListener (changeEventName, OnChange);
+        GameMessenger.Instance.Messenger.AddListener (changeEventName, OnChange);
 	}
 	
     void OnChange(Message message) {

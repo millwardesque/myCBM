@@ -9,7 +9,7 @@ public class ScoreKeeper {
             int oldScore = m_score;
             m_score = value;
             if (m_score != oldScore) {
-                GameManager.Instance.Messenger.SendMessage (GameManager.Instance, "Score Changed", m_score);
+                GameMessenger.Instance.Messenger.SendMessage (GameManager.Instance, "Score Changed", m_score);
             }
         }
     }

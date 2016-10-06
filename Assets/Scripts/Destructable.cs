@@ -25,7 +25,7 @@ public class Destructable : MonoBehaviour {
 
     public void Dead() {
         gameObject.SendMessage ("OnDead", null, SendMessageOptions.DontRequireReceiver);
-        GameManager.Instance.Messenger.SendMessage (this, "On Destructable Dead", this);
+        GameMessenger.Instance.Messenger.SendMessage (this, "On Destructable Dead", this);
         Destroy (gameObject);
     }
 }

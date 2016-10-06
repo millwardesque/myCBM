@@ -5,11 +5,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
     public GameObject gameOverWindow;
 
-    MessageManager m_messenger;
-    public MessageManager Messenger {
-        get { return m_messenger; }
-    }
-
     ScoreKeeper m_scoreKeeper;
     public ScoreKeeper Score {
         get { return m_scoreKeeper; }
@@ -26,13 +21,9 @@ public class GameManager : MonoBehaviour {
     void Awake() {
         if (Instance == null) {
             Instance = this;
-
-            m_messenger = new MessageManager ();
             m_scoreKeeper = new ScoreKeeper ();
 
             m_player = GameObject.FindGameObjectWithTag ("Player");
-
-            Messenger.AddListener ("On Destructable Dead", OnDestructableDead);
         }
         else {
             Destroy (gameObject);
@@ -40,6 +31,7 @@ public class GameManager : MonoBehaviour {
     }
 
     void Start() {
+        GameMessenger.Instance.Messenger.AddListener ("On Destructable Dead", OnDestructableDead);
         Time.timeScale = 1f;
     }
 
